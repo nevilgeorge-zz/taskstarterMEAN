@@ -14,9 +14,9 @@ taskstarterApp.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/add', {
+        templateUrl: 'views/addform.html',
+        controller: 'FormCtrl'
       })
       .otherwise({
         redirectTo: '/'
