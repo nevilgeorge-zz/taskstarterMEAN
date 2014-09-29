@@ -30,6 +30,10 @@ taskstarterControllers.controller('MainCtrl', ['$scope', '$http', function($scop
     //     $scope.todos = data;
     // });
     $scope.todos = todoList;
+    $scope.increment = function() {
+        $scope.todo.priority++;
+    }
+    
 }]);
 
 taskstarterControllers.controller('FormCtrl', ['$scope', '$http', function($scope, $http) {
