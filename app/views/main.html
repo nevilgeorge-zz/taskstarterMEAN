@@ -1,3 +1,4 @@
+
 <div class="header">
 	<ul class="nav nav-pills pull-right">
 		<li class="active"><a ng-href="#">Home</a></li>
@@ -6,8 +7,15 @@
 	<h1 class="name">taskstarter</h1>
 </div>
 
-<div ng-repeat="todo in todos" class="sticky-note taped">
-  <ul>
-    <li>{{todo.text}}</li>
-  </ul>
+<div ng-repeat="todo in todos">
+	
+	<div class="sticky-note taped">
+	    <p>{{todo.text}}</p>
+	</div>
+
+<div><i class='top'></i> <div class="rank">{{todo.priority}}</div> </div>
+
+
 </div>
+
+
