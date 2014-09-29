@@ -1,4 +1,12 @@
+<div class="header">
+	<ul class="nav nav-pills pull-right">
+		<li><a ng-href="#">Home</a></li>
+		<li class="active"><a ng-href="#/add">Add</a></li>
+	</ul>
+	<h1 class="name">taskstarter</h1>
+</div>
+
 <div class="container animated fadeInLeft container-sm" id="loginContainer">
-    <input type="text" tabindex="1" autofocus autofocus="true" value="" placeholder="Add a to-do item" name="loginEmail" class="top form-control" ng-model="todo"/>
-    <button id="loginProcessBtn" ng-click="print()" class="btn btn-block framewire-yellow-btn">Add</button>
+    <input type="text" tabindex="1" autofocus autofocus="true" value="" placeholder="Add a to-do item" name="loginEmail" class="top form-control" ng-model="todoText"/>
+    <button id="loginProcessBtn" ng-click="save()" class="btn btn-block framewire-yellow-btn">Add</button>
 </div>

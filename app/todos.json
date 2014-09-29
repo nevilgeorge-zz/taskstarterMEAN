@@ -1,0 +1,18 @@
+[
+    {
+        "text": "Tell Christina to shut up.",
+        "priority": 2
+    },
+    {
+        "text": "Do laundry",
+        "priority": 5
+    },
+    {
+        "text": "Buy groceries.",
+        "priority": 3
+    },
+    {
+        "text": "Eat lunch",
+        "priority": 8
+    }
+]
