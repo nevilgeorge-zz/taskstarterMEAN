@@ -7,7 +7,7 @@
 	<h1 class="name">taskstarter</h1>
 </div>
 
-<div class="container" ng-repeat="todo in todos" style="width: 500px;">
+<div class="container" ng-repeat="todo in todos | orderBy:orderProp:true" style="width: 500px;">
 		<div class="sticky-note taped" style="position: relative; float: left;">
 			<p>{{todo.text}}</p>
 		</div>

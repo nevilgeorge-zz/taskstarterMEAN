@@ -30,6 +30,7 @@ taskstarterControllers.controller('MainCtrl', ['$scope', '$http', function($scop
     //     $scope.todos = data;
     // });
     $scope.todos = todoList;
+    $scope.orderProp = 'priority';
 
 }]);
 
