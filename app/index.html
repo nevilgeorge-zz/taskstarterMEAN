@@ -28,12 +28,15 @@
           <li><a ng-href="#/about">About</a></li>
           <li><a ng-href="#">Contact</a></li>
         </ul>
-        <h3 class="text-muted">taskstarter</h3>
+        <h1 class="name">taskstarter</h1>
+
       </div>
 
-      <ul>
-        <li ng-repeat="todo in todos">{{todo.text}}</li>
-      </ul>
+      <div class="sticky-note taped">
+        <ul>
+          <li ng-repeat="todo in todos">{{todo.text}}</li>
+        </ul>
+      </div>
 
       <div ng-view=""></div>
 
