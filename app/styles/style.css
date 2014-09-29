@@ -12,6 +12,8 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -204,9 +206,10 @@ input:focus { outline: none; }
     background-color: #cd4d4e;
 }
     .loginBody body {
-      background-color: #cd4d4e;
+      background-color: #FFF;
       font-family: "open sans";
       font-weight:300;
+      color:#FFF;
     }
     .loginBody h1 {
         text-align: center;
@@ -286,22 +289,14 @@ input:focus { outline: none; }
     }
 .container-sm {
     width: 300px;
-    margin-bottom:30px; 
+    margin-bottom:50px; 
+    margin-top:50px; 
+
 }
 .framewire-yellow-btn  {
-     color:  #ffffff;
-     font-weight: 700;
-     text-shadow: 1px 1px 2px #A96F00;
-     background-color:  #FEB41C;
-     background-image:  -moz-linear-gradient(top,  #ffd23a,  #e09600);
-     background-image:  -ms-linear-gradient(top,  #ffd23a,  #e09600);
-     background-image:  -webkit-gradient(linear,  0 0,  0 100%,  from(#ffd23a),  to(#e09600));
-     background-image:  -webkit-linear-gradient(top,  #ffd23a,  #e09600);
-     background-image:  -o-linear-gradient(top,  #ffd23a,  #e09600);
-     background-image:  linear-gradient(top,  #ffd23a,  #e09600);
-     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd23a',  endColorstr='#e09600',  GradientType=0);
-     border-color:  #FEB41C #e09600 #e09600 #FEB41C;
-     border-color:  rgba(0,  0,  0,  0.25) rgba(0,  0,  0,  0.35) rgba(0,  0,  0,  0.35) rgba(0,  0,  0,  0.25);
+       background-color: #8AC007;
+       color:#FFF;
+       margin-top: 10px;
  }
 
 .framewire-yellow-btn:hover,  .framewire-yellow-btn:active,  .framewire-yellow-btn.active,  .framewire-yellow-btn.disabled,  .framewire-yellow-btn[disabled]  {
@@ -309,12 +304,12 @@ input:focus { outline: none; }
  }
 
 .framewire-yellow-btn:hover  {
-     color:  #ffffe4;
+     color:  #fff;
      text-shadow:  0px -1px 0px #c27800;
  }
 
 .framewire-yellow-btn:focus  {
-     color:  #ffff80;
+     color:  #fff;
      -webkit-box-shadow:  inset 0 2px 4px rgba(0,  0,  0,  0.15),  0 1px 2px rgba(0,  0,  0,  0.05);
      -moz-box-shadow:  inset 0 2px 4px rgba(0,  0,  0,  0.15),  0 1px 2px rgba(0,  0,  0,  0.05);
      box-shadow:  inset 0 2px 4px rgba(0,  0,  0,  0.15),  0 1px 2px rgba(0,  0,  0,  0.05);
@@ -327,7 +322,7 @@ input:focus { outline: none; }
      -webkit-box-shadow:  inset 0 2px 4px rgba(0,  0,  0,  0.15),  0 1px 2px rgba(0,  0,  0,  0.05);
      -moz-box-shadow:  inset 0 2px 4px rgba(0,  0,  0,  0.15),  0 1px 2px rgba(0,  0,  0,  0.05);
      box-shadow:  inset 0 2px 4px rgba(0,  0,  0,  0.15),  0 1px 2px rgba(0,  0,  0,  0.05);
-     color:  #ffff80;
+     color:  #fff;
  }
 
 
