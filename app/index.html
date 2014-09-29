@@ -32,9 +32,9 @@
 
       </div>
 
-      <div class="sticky-note taped">
+      <div ng-repeat="todo in todos" class="sticky-note taped">
         <ul>
-          <li ng-repeat="todo in todos">{{todo.text}}</li>
+          <li>{{todo.text}}</li>
         </ul>
       </div>
 
