@@ -286,6 +286,7 @@ input:focus { outline: none; }
     }
 .container-sm {
     width: 300px;
+    margin-bottom:30px; 
 }
 .framewire-yellow-btn  {
      color:  #ffffff;
