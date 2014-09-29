@@ -7,7 +7,7 @@ var taskstarterControllers = angular.module('taskstarterControllers', []);
  * # MainCtrl
  * Controller of the taskstarterApp
  */
-taskstarterControllers.controller('MainCtrl', function ($scope) {
+taskstarterControllers.controller('MainCtrl', ['$scope', function($scope) {
     $scope.todos = [
     	{
     		'text': 'Tell Christina to shut up.',
@@ -22,4 +22,6 @@ taskstarterControllers.controller('MainCtrl', function ($scope) {
     		'priority': 3
     	}
     ];
-  });
+  }]);
+
+

@@ -29,18 +29,9 @@
           <li><a ng-href="#">Contact</a></li>
         </ul>
         <h1 class="name">taskstarter</h1>
-
       </div>
 
-      <div ng-repeat="todo in todos" class="sticky-note taped">
-        <ul>
-          <li>{{todo.text}}
-
-          </li>
-        </ul>
-      </div>
-
-      <div ng-view=""></div>
+      <div ng-view></div>
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
@@ -83,8 +74,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/arrow.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers.js"></script>
         <!-- endbuild -->
 </body>
 </html>

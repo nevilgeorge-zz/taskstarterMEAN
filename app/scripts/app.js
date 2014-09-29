@@ -1,5 +1,5 @@
 'use strict';
-
+var taskstarterApp = angular.module('taskstarterApp', ['ngRoute', 'taskstarterControllers']);
 /**
  * @ngdoc overview
  * @name taskstarterApp
@@ -8,16 +8,7 @@
  *
  * Main module of the application.
  */
-angular
-  .module('taskstarterApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+taskstarterApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -30,4 +21,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);
