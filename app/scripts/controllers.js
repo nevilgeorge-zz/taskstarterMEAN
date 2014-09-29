@@ -2,15 +2,15 @@
 var taskstarterControllers = angular.module('taskstarterControllers', []);
 var todoList = [
     {
-        "text": "Tell Christina to shut up.",
-        "priority": 2
-    },
-    {
-        "text": "Do laundry",
+        "text": "Do EECS 395 project",
         "priority": 5
     },
     {
-        "text": "Buy groceries.",
+        "text": "Do laundry",
+        "priority": 2
+    },
+    {
+        "text": "Buy groceries",
         "priority": 3
     },
     {
@@ -30,10 +30,7 @@ taskstarterControllers.controller('MainCtrl', ['$scope', '$http', function($scop
     //     $scope.todos = data;
     // });
     $scope.todos = todoList;
-    $scope.increment = function() {
-        $scope.todo.priority++;
-    }
-    
+
 }]);
 
 taskstarterControllers.controller('FormCtrl', ['$scope', '$http', function($scope, $http) {
@@ -41,14 +38,14 @@ taskstarterControllers.controller('FormCtrl', ['$scope', '$http', function($scop
     $scope.save = function() {
         temp = {
             "text": $scope.todoText,
-            "priority": 0
+            "priority": 1
         };
         todoList.push(temp);
         reset();
     }
 
     reset = function() {
-        $scope.todo = "";
+        $scope.todoText = "";
     }
 }]);
 
