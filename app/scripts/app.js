@@ -1,5 +1,5 @@
 'use strict';
-var taskstarterApp = angular.module('taskstarterApp', ['ngRoute', 'taskstarterControllers']);
+var taskstarterApp = angular.module('taskstarterApp', ['ngRoute', 'taskstarterControllers', 'TaskService']);
 /**
  * @ngdoc overview
  * @name taskstarterApp
