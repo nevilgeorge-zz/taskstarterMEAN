@@ -30,8 +30,18 @@ taskstarterControllers.controller('MainCtrl', ['$scope', '$http', function($scop
         console.log(data);
         $scope.todos = data;
     });
-    //$scope.todos = todoList;
     $scope.orderProp = 'priority';
+    $scope.increment = function(todo) {
+        // grab id of the todo to increment
+        var id = todo._id;
+        // update priority of the task that corresponds to the id
+        $http.put('/api/tasks/' + id).success(function(data, status) {
+            if (data) {
+                todo.priority = data.priority;
+            }          
+            console.log(data);
+        });
+    }
 
 }]);
 
@@ -42,6 +52,7 @@ taskstarterControllers.controller('FormCtrl', ['$scope', '$http', function($scop
             title: $scope.todoText,
             priority: 1
         };
+        // send post request to add the new task to the database
         $http.post('/api/tasks', temp).success(function(data, status) {
             console.log('POST success');
             reset();

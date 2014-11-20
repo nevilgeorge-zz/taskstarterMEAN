@@ -39,6 +39,44 @@ module.exports = function(app) {
         });
     });
 
+    // route to handle updates goes here (app.put)
+    app.put('/api/tasks/:id', function(req, res) {
+        var id = req.params.id;
+        console.log(id);
+
+        if (!req.body) {
+            // send error status
+            return res.send(400);
+        }
+
+        // first find the task in the databae
+        Task.findById(id, function(err, data) {
+            // if error occurred or data was not found
+            if (err) {
+                // send error message
+                return res.send(500, err);
+            }
+            if (!data) {
+                // send error message
+                return res.send(404);
+            }
+
+            console.log(data);
+
+            // increase the priority of the object found
+            data.priority += 1;
+
+            // save the object after updating
+            data.save(function(err) {
+                if (err) {
+                    return console.log('error')
+                }
+                // send the updated data back to the Angular frontend
+                res.json(data);
+            });
+        });
+    });
+
     // route to handle delete goes here (app.delete)
 
     // frontend routes =========================================================
