@@ -78,6 +78,31 @@ module.exports = function(app) {
     });
 
     // route to handle delete goes here (app.delete)
+    app.delete('/api/tasks/:id', function(req, res) {
+    	var id = req.params.id;
+
+    	if (!req.body) {
+    		return res.send(400);
+    	}
+
+    	Task.findById(id, function(err, data) {
+    		if (err) {
+    			return res.send(500, err);
+    		}
+
+    		if (!data) {
+    			return res.send(404);
+    		}
+
+    		data.remove(function(err) {
+    			if (err) {
+    				return console.log('Error occurred while deleting');
+    			}
+    			res.send(true);
+    			console.log('item deleted');
+    		});
+    	});
+    });
 
     // frontend routes =========================================================
     // route to handle all angular requests

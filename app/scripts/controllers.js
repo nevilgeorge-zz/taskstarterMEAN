@@ -1,23 +1,23 @@
 'use strict';
 var taskstarterControllers = angular.module('taskstarterControllers', []);
-// var todoList = [
-//     {
-//         "text": "Do EECS 395 project",
-//         "priority": 5
-//     },
-//     {
-//         "text": "Do laundry",
-//         "priority": 2
-//     },
-//     {
-//         "text": "Buy groceries",
-//         "priority": 3
-//     },
-//     {
-//         "text": "Eat lunch",
-//         "priority": 8
-//     }
-// ];
+var todoList = [
+    {
+        "text": "Do EECS 395 project",
+        "priority": 5
+    },
+    {
+        "text": "Do laundry",
+        "priority": 2
+    },
+    {
+        "text": "Buy groceries",
+        "priority": 3
+    },
+    {
+        "text": "Eat lunch",
+        "priority": 8
+    }
+];
 /**
  * @ngdoc function
  * @name taskstarterApp.controller:MainCtrl
@@ -25,7 +25,8 @@ var taskstarterControllers = angular.module('taskstarterControllers', []);
  * # MainCtrl
  * Controller of the taskstarterApp
  */
-taskstarterControllers.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
+taskstarterControllers.controller('MainCtrl', ['$scope', '$http', '$route', function($scope, $http, $route) {
+    //$scope.todos = todoList;
     $http.get('/api/tasks').success(function(data) {
         console.log(data);
         $scope.todos = data;
@@ -41,6 +42,20 @@ taskstarterControllers.controller('MainCtrl', ['$scope', '$http', function($scop
             }          
             console.log(data);
         });
+    }
+
+    $scope.delete = function(todo) {
+        var id = todo._id;
+        $http.delete('/api/tasks/' + id).success(function(err, data) {
+            if (data) {
+                console.log('Todo deleted');
+                // $route.reload();
+                // remove deleted element from the array rather than force reloading the page
+                var index = $scope.todos.indexOf(todo);
+                $scope.todos.splice(index, 1);
+            }
+        });
+        
     }
 
 }]);
