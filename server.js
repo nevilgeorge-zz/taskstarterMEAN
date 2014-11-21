@@ -37,6 +37,7 @@ app.use(express.static(__dirname + '/app'));
 app.use(express.static(__dirname + '/bower_components'));
 app.use(express.static(__dirname + '/dist'));
 
+// "bower_components" is the directory used in the index.html
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 // routes ==================================================
